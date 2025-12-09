@@ -40,17 +40,17 @@ export function Post({ post }: { post: PostType }) {
       />
       
       {/* CTA Section */}
-      <div className="mt-16 mb-12 p-8 sm:p-10 bg-muted rounded-xl border border-border text-center">
-        <h3 className="text-2xl sm:text-3xl font-bold mb-4">Ready to boost your productivity?</h3>
-        <p className="text-muted-foreground mb-8 text-lg max-w-2xl mx-auto">
+      <div className="mt-16 mb-12 p-6 sm:p-8 md:p-10 bg-muted rounded-xl border border-border text-center">
+        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4">Ready to boost your productivity?</h3>
+        <p className="text-muted-foreground mb-6 sm:mb-8 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-2">
           Customodoro is a powerful and fully customizable Pomodoro timer designed to help students, professionals, and creatives stay focused and productive.
         </p>
         <ExternalLink
           href={APP_URL}
-          className="inline-flex items-center gap-2 px-8 py-4 bg-foreground text-background text-base font-medium rounded-full hover:bg-primary transition-colors"
+          className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-foreground text-background text-sm sm:text-base font-medium rounded-full hover:bg-primary transition-colors w-full sm:w-auto max-w-sm sm:max-w-none"
         >
           Try Customodoro for Free
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
         </ExternalLink>
