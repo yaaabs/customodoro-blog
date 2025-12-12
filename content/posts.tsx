@@ -126,6 +126,13 @@ const posts: Post[] = [
       <p><strong>Anyone else ditched classic Pomodoro for something more flexible?</strong></p>
       
       <p><em>Originally shared on <a href="https://www.reddit.com/r/ProductivityApps/" target="_blank" rel="noopener noreferrer">r/ProductivityApps</a></em></p>
+      
+      <blockquote class="reddit-embed-bq" style="height:500px" data-embed-height="500">
+        <a href="https://www.reddit.com/r/ProductivityApps/comments/1mq7mao/i_broke_up_with_pomodoro_technique_reverse/">I broke up with Pomodoro Technique. Reverse Pomodoro Timer's my rebound!</a><br> by
+        <a href="https://www.reddit.com/user/Own-Procedure5104/">u/Own-Procedure5104</a> in
+        <a href="https://www.reddit.com/r/ProductivityApps/">ProductivityApps</a>
+      </blockquote>
+      <script async="" src="https://embed.reddit.com/widgets.js" charset="UTF-8"></script>
     `,
   },
   {
