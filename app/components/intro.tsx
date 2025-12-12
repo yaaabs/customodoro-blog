@@ -13,7 +13,7 @@ export function Intro() {
             Stories & Updates
           </span>
           <div className="flex items-center gap-3">
-            <span className="text-xs text-muted-foreground hidden sm:inline">Follow</span>
+            <span className="text-xs text-muted-foreground hidden sm:inline">Follow. Connect. Interact.</span>
             <SocialLinks iconSize="sm" />
           </div>
         </div>
@@ -26,7 +26,10 @@ export function Intro() {
             <span className="text-foreground group-hover:text-primary transition-colors">.</span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed">
-            Behind the app. Productivity tips. Success stories from focused achievers.
+            Behind the app. Updates. Articles.
+          </p>
+          <p className="text-sm sm:text-base text-muted-foreground max-w-lg leading-relaxed">
+            The customizable Pomodoro timer built for focused productivity.
           </p>
         </div>
 

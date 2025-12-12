@@ -93,6 +93,21 @@ const posts: Post[] = [
       <p>Congratulations to all November 2025 board passers. Your dedication and hard work have paid off, and we are honored that Customodoro played a part in some of your journeys.</p>
       
       <p>This is only the beginning. More updates and improvements are on the way.</p>
+      <div style="width:100%; max-width:900px; margin:2rem auto;">
+        <iframe
+          src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7398359836335251456"
+          height="600"
+          width="100%"
+          frameBorder="0"
+          allowFullScreen
+          title="LinkedIn post"
+        ></iframe>
+        <p style="text-align:center; margin-top:0.5rem; opacity:0.85">
+          <a href="https://www.linkedin.com/posts/customodoro_pharmacistlicensureexam-rph-customodoro-activity-7398359836335251456-27ln/" target="_blank" rel="noopener noreferrer">
+            View on LinkedIn
+          </a>
+        </p>
+      </div>
     `,
   },
   {
