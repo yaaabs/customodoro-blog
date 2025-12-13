@@ -1,5 +1,4 @@
-import Link from "next/link"
-import { BLOG_NAME, APP_URL } from "@/lib/constants"
+import { APP_URL } from "@/lib/constants"
 import { SocialLinks } from "./social-links"
 import { ExternalLink } from "./external-link"
 

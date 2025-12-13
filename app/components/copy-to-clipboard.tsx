@@ -9,14 +9,18 @@ export default function CopyToClipboard({ code }: { code: string }) {
 
   const copyToClipboard = async () => {
     try {
-      await navigator.clipboard.writeText(code);
-      setCopied(true);
-    } catch (error) {
+      if (typeof globalThis.navigator !== "undefined" && globalThis.navigator.clipboard) {
+        await globalThis.navigator.clipboard.writeText(code);
+        setCopied(true);
+      }
+    } catch {
       // Silent error handling - user will see copy button remain unchanged
     } finally {
-      setTimeout(() => {
-        setCopied(false);
-      }, 2000);
+      if (typeof globalThis.setTimeout !== "undefined") {
+        globalThis.setTimeout(() => {
+          setCopied(false);
+        }, 2000);
+      }
     }
   };
 

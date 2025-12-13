@@ -1,5 +1,7 @@
 "use client"
 
+/* global HTMLDivElement */
+
 import { useEffect, useRef, useState } from "react"
 
 interface TikTokEmbedProps {
@@ -21,8 +23,14 @@ export function TikTokEmbed({ url, className = "" }: TikTokEmbedProps) {
   const videoId = getVideoId(url)
 
   useEffect(() => {
+    // If IntersectionObserver isn't available (SSR or old browsers), show immediately
+    if (typeof globalThis.IntersectionObserver === "undefined") {
+      setIsVisible(true)
+      return
+    }
+
     // Lazy load with IntersectionObserver
-    const observer = new IntersectionObserver(
+    const observer = new globalThis.IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -47,16 +55,18 @@ export function TikTokEmbed({ url, className = "" }: TikTokEmbedProps) {
     if (!isVisible) return
 
     // Load TikTok embed script only when visible
-    const script = document.createElement("script")
-    script.src = "https://www.tiktok.com/embed.js"
-    script.async = true
-    document.body.appendChild(script)
+    if (typeof globalThis.document !== "undefined") {
+      const script = globalThis.document.createElement("script")
+      script.src = "https://www.tiktok.com/embed.js"
+      script.async = true
+      globalThis.document.body.appendChild(script)
 
-    return () => {
-      // Cleanup script on unmount
-      const existingScript = document.querySelector('script[src="https://www.tiktok.com/embed.js"]')
-      if (existingScript) {
-        existingScript.remove()
+      return () => {
+        // Cleanup script on unmount
+        const existingScript = globalThis.document.querySelector('script[src="https://www.tiktok.com/embed.js"]')
+        if (existingScript) {
+          existingScript.remove()
+        }
       }
     }
   }, [isVisible])
