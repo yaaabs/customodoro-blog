@@ -18,10 +18,15 @@ yarn-error.log*
 
 # env files
 .env*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # vercel
 .vercel
 
+.DS_Store
 # typescript
 *.tsbuildinfo
 next-env.d.ts
@@ -33,3 +38,4 @@ out/
 coverage/
 *.log
 .eslintcache
+.vscode/
