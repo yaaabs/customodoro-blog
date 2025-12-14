@@ -1,6 +1,7 @@
 import { Intro } from "./components/intro"
 import { ArticleCard } from "./components/article-card"
 import { MoreStories } from "./components/more-stories"
+import SocialUpdates from "./components/social-updates"
 import { PressSection } from "./components/press-section"
 import type { Metadata } from "next"
 import { getAllPosts } from "@/content/posts"
@@ -34,6 +35,7 @@ export default function Page() {
         <Intro />
         {heroPost && <ArticleCard post={heroPost} variant="hero" priority />}
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+        <SocialUpdates />
         <PressSection />
       </section>
     </main>
