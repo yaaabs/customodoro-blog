@@ -4,7 +4,9 @@ import { notFound } from "next/navigation"
 import { Post } from "@/app/components/post"
 import { MoreStories } from "@/app/components/more-stories"
 import { getAllPosts, getPostBySlug, getMorePosts } from "@/content/posts"
-import { BLOG_NAME } from "@/lib/constants"
+import { BLOG_NAME, APP_URL } from "@/lib/constants"
+import Schema from "@/app/components/schema"
+import { buildArticleSchema } from "@/app/components/seo"
 
 export function generateStaticParams() {
   const posts = getAllPosts()
@@ -21,9 +23,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${post.title} | ${BLOG_NAME}`,
     description: post.excerpt,
+    alternates: { canonical: `${APP_URL}/posts/${post.slug}` },
     openGraph: {
       title: post.title,
       description: post.excerpt,
+      url: `${APP_URL}/posts/${post.slug}`,
       images: post.coverImage ? [{ url: post.coverImage, width: 1200, height: 630, alt: post.title }] : [],
     },
     twitter: {
@@ -67,6 +71,15 @@ export default async function PostPage({ params }: PageProps) {
           </Link>
         </div>
         <Post post={post} />
+        <Schema data={buildArticleSchema({
+          headline: post.title,
+          description: post.excerpt,
+          image: post.coverImage,
+          author: post.author.name,
+          datePublished: post.date,
+          dateModified: post.date,
+          url: `${APP_URL}/posts/${post.slug}`,
+        })} />
         {morePosts.length > 0 && (
           <>
             <hr className="mt-16 sm:mt-20 md:mt-24 mb-12 sm:mb-16 border-border" />
