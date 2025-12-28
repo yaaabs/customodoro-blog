@@ -11,12 +11,16 @@ export default function Footer() {
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-12 gap-8 md:gap-8">
             {/* Brand - full width on mobile */}
             <div className="col-span-2 sm:col-span-2 md:col-span-5">
-              <Link href="/" className="text-xl sm:text-2xl font-bold tracking-tight">
+              <Link
+                href="/"
+                className="text-xl sm:text-2xl font-bold tracking-tight"
+              >
                 <span className="text-foreground">Customodoro</span>
                 <span className="text-primary"> Blog</span>
               </Link>
               <p className="mt-2 sm:mt-3 text-sm text-muted-foreground max-w-sm">
-                The ultimate customizable Pomodoro timer for focused productivity.
+                The ultimate customizable Pomodoro timer for focused
+                productivity.
               </p>
               <div className="mt-4 sm:mt-6">
                 <SocialLinks iconSize="md" />

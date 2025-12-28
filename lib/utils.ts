@@ -11,7 +11,9 @@ export function cn(...inputs: ClassValue[]) {
  */
 export function readingTimeFromHtml(html: string, wordsPerMinute = 200) {
   if (!html) return 0
-  const text = html.replace(/<[^>]+>/g, " ").replace(/&nbsp;|&amp;|&quot;|&lt;|&gt;/g, " ")
+  const text = html
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&nbsp;|&amp;|&quot;|&lt;|&gt;/g, " ")
   const words = text.trim().split(/\s+/).filter(Boolean).length
   return Math.max(1, Math.ceil(words / wordsPerMinute))
 }

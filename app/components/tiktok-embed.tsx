@@ -39,7 +39,7 @@ export function TikTokEmbed({ url, className = "" }: TikTokEmbedProps) {
           }
         })
       },
-      { rootMargin: "50px" }
+      { rootMargin: "50px" },
     )
 
     if (containerRef.current) {
@@ -63,7 +63,9 @@ export function TikTokEmbed({ url, className = "" }: TikTokEmbedProps) {
 
       return () => {
         // Cleanup script on unmount
-        const existingScript = globalThis.document.querySelector('script[src="https://www.tiktok.com/embed.js"]')
+        const existingScript = globalThis.document.querySelector(
+          'script[src="https://www.tiktok.com/embed.js"]',
+        )
         if (existingScript) {
           existingScript.remove()
         }

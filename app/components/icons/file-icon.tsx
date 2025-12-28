@@ -14,5 +14,5 @@ export default function FileIcon() {
         fill="#646464"
       ></path>
     </svg>
-  );
+  )
 }

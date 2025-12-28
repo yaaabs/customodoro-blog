@@ -28,7 +28,8 @@ export const SOCIAL_LINKS = {
   linkedin: "https://linkedin.com/company/customodoro",
   tiktok: "https://www.tiktok.com/@wtvrclari/photo/7524766513920773384",
   github: "https://github.com/yaaabs/customodoro",
-  reddit: "https://www.reddit.com/r/ProductivityApps/comments/1mq7mao/i_broke_up_with_pomodoro_technique_reverse/",
+  reddit:
+    "https://www.reddit.com/r/ProductivityApps/comments/1mq7mao/i_broke_up_with_pomodoro_technique_reverse/",
 }
 
 // ============================================
@@ -50,7 +51,8 @@ export const PRESS_ARTICLES = [
   },
   {
     publication: "Product Hunt",
-    title: "I recently gave Customodoro Timer a try, and honestly, it's one of the best Pomodoro tools I've used so far. What I love most is how much you can make it your own—you can adjust everything from work sessions and break times to themes, sounds, background music, and even images...",
+    title:
+      "I recently gave Customodoro Timer a try, and honestly, it's one of the best Pomodoro tools I've used so far. What I love most is how much you can make it your own—you can adjust everything from work sessions and break times to themes, sounds, background music, and even images...",
     url: "https://producthunt.com/posts/customodoro",
     author: "Kanza Mushtaq",
   },

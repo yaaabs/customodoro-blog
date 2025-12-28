@@ -20,14 +20,18 @@ export function PressSection() {
   return (
     <section className="py-12 sm:py-16 border-t border-border">
       <div className="mb-8 sm:mb-10">
-        <span className="text-xs font-medium tracking-widest uppercase text-muted-foreground">In The Press</span>
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mt-2">What others are saying</h2>
+        <span className="text-xs font-medium tracking-widest uppercase text-muted-foreground">
+          In The Press
+        </span>
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mt-2">
+          What others are saying
+        </h2>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         {PRESS_ARTICLES.map((article) => {
           const logoSrc = getPublicationLogo(article.publication)
-          
+
           return (
             <a
               key={article.url}
@@ -53,23 +57,36 @@ export function PressSection() {
                 </div>
                 <div className="min-w-0">
                   {article.author && (
-                    <p className="font-medium text-sm truncate">{article.author}</p>
+                    <p className="font-medium text-sm truncate">
+                      {article.author}
+                    </p>
                   )}
-                  <p className="text-xs text-muted-foreground">{article.publication}</p>
+                  <p className="text-xs text-muted-foreground">
+                    {article.publication}
+                  </p>
                 </div>
               </div>
               <p className="text-sm sm:text-base text-foreground font-medium leading-snug group-hover:text-primary transition-colors line-clamp-2 mb-2">
                 {article.title}
               </p>
               <div className="mt-3 sm:mt-4 flex items-center gap-2 text-xs sm:text-sm text-muted-foreground">
-                <span>{article.publication === "Product Hunt" ? "Read review" : "Read article"}</span>
+                <span>
+                  {article.publication === "Product Hunt"
+                    ? "Read review"
+                    : "Read article"}
+                </span>
                 <svg
                   className="w-3 h-3 sm:w-4 sm:h-4 transition-transform group-hover:translate-x-1"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
                 </svg>
               </div>
             </a>

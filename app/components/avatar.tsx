@@ -9,7 +9,8 @@ export default function Avatar({
   url: string
   size?: "sm" | "md" | "lg"
 }) {
-  const blurDataURL = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
+  const blurDataURL =
+    "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
   const sizeClasses = {
     sm: "w-8 h-8",
     md: "w-10 h-10 sm:w-12 sm:h-12",

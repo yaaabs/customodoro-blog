@@ -5,7 +5,10 @@ interface SocialLinksProps {
   iconSize?: "sm" | "md"
 }
 
-export function SocialLinks({ className = "", iconSize = "sm" }: SocialLinksProps) {
+export function SocialLinks({
+  className = "",
+  iconSize = "sm",
+}: SocialLinksProps) {
   const size = iconSize === "sm" ? "w-5 h-5" : "w-6 h-6"
 
   return (

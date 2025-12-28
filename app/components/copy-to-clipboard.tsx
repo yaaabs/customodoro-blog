@@ -1,28 +1,31 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import CheckIcon from "./icons/check-icon";
-import ClipboardIcon from "./icons/clipboard-icon";
+import { useState } from "react"
+import CheckIcon from "./icons/check-icon"
+import ClipboardIcon from "./icons/clipboard-icon"
 
 export default function CopyToClipboard({ code }: { code: string }) {
-  const [copied, setCopied] = useState(false);
+  const [copied, setCopied] = useState(false)
 
   const copyToClipboard = async () => {
     try {
-      if (typeof globalThis.navigator !== "undefined" && globalThis.navigator.clipboard) {
-        await globalThis.navigator.clipboard.writeText(code);
-        setCopied(true);
+      if (
+        typeof globalThis.navigator !== "undefined" &&
+        globalThis.navigator.clipboard
+      ) {
+        await globalThis.navigator.clipboard.writeText(code)
+        setCopied(true)
       }
     } catch {
       // Silent error handling - user will see copy button remain unchanged
     } finally {
       if (typeof globalThis.setTimeout !== "undefined") {
         globalThis.setTimeout(() => {
-          setCopied(false);
-        }, 2000);
+          setCopied(false)
+        }, 2000)
       }
     }
-  };
+  }
 
   return (
     <button
@@ -31,5 +34,5 @@ export default function CopyToClipboard({ code }: { code: string }) {
     >
       {copied ? <CheckIcon /> : <ClipboardIcon />}
     </button>
-  );
+  )
 }

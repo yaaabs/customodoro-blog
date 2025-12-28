@@ -8,7 +8,9 @@ export function useIsMobile() {
   React.useEffect(() => {
     if (typeof globalThis.window === "undefined") return
 
-    const mql = globalThis.window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT - 1}px)`)
+    const mql = globalThis.window.matchMedia(
+      `(max-width: ${MOBILE_BREAKPOINT - 1}px)`,
+    )
     const onChange = () => {
       setIsMobile(globalThis.window.innerWidth < MOBILE_BREAKPOINT)
     }

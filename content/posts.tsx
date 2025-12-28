@@ -46,7 +46,7 @@ export type Post = {
 const posts: Post[] = [
   {
     id: 1,
-    title: "From \"Can you build me a timer?\" to a licensed pharmacist.",
+    title: 'From "Can you build me a timer?" to a licensed pharmacist.',
     slug: "from-timer-request-to-licensed-pharmacist",
     excerpt:
       "How a simple question from someone studying for board exams turned into a productivity tool used by thousands. The real story behind Customodoro.",
@@ -112,7 +112,8 @@ const posts: Post[] = [
   },
   {
     id: 2,
-    title: "I broke up with Pomodoro Technique. Reverse Pomodoro Timer's my rebound!",
+    title:
+      "I broke up with Pomodoro Technique. Reverse Pomodoro Timer's my rebound!",
     slug: "i-broke-up-with-pomodoro",
     excerpt:
       "Classic Pomodoro and I were together for years — the usual 25 minutes of work, 5 minutes of break routine. At first it was cute, but then it started interrupting me right when I was finally focused. Total buzzkill.",
@@ -154,7 +155,8 @@ const posts: Post[] = [
     id: 3,
     title: "How a Midnight TikTok Post Changed Everything",
     slug: "midnight-tiktok-post-changed-everything",
-    excerpt: "On a random Wednesday at midnight, my girlfriend asked if she could post about me on TikTok. I said yes. We had no idea what would happen next.",
+    excerpt:
+      "On a random Wednesday at midnight, my girlfriend asked if she could post about me on TikTok. I said yes. We had no idea what would happen next.",
     coverImage: "/tt.png",
     date: "2025-07-09",
     author: {
@@ -222,7 +224,9 @@ const posts: Post[] = [
  * Get all posts sorted by date (newest first)
  */
 export function getAllPosts(): Post[] {
-  return [...posts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  return [...posts].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  )
 }
 
 /**

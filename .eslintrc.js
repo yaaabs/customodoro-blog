@@ -21,20 +21,34 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-    "next/core-web-vitals"
+    "next/core-web-vitals",
   ],
   settings: {
     react: { version: "detect" },
   },
   // ensure generated build files are ignored by ESLint
-  ignorePatterns: [".next", ".next/**", "node_modules", "node_modules/**", "public", "public/**", "out", "out/**", "dist", "dist/**"],
+  ignorePatterns: [
+    ".next",
+    ".next/**",
+    "node_modules",
+    "node_modules/**",
+    "public",
+    "public/**",
+    "out",
+    "out/**",
+    "dist",
+    "dist/**",
+  ],
   rules: {
     // allow require in config files
     "@typescript-eslint/no-require-imports": "off",
     // relax some strict rules for this project
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-explicit-any": "warn",
-    "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
+    ],
     // allow console in tooling
     "no-console": ["warn", { allow: ["warn", "error", "info"] }],
     // prefer automatic JSX runtime
@@ -48,14 +62,14 @@ module.exports = {
       files: ["*.ts", "*.tsx"],
       rules: {
         // TS files should use TS rules
-      }
+      },
     },
     {
       files: ["*.config.js", "*.config.ts", "tailwind.config.ts"],
       rules: {
         "@typescript-eslint/no-var-requires": "off",
         "@typescript-eslint/no-require-imports": "off",
-      }
-    }
-  ]
+      },
+    },
+  ],
 }
