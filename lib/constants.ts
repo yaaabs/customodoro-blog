@@ -53,7 +53,7 @@ export const PRESS_ARTICLES = [
     publication: "Product Hunt",
     title:
       "I recently gave Customodoro Timer a try, and honestly, it's one of the best Pomodoro tools I've used so far. What I love most is how much you can make it your own—you can adjust everything from work sessions and break times to themes, sounds, background music, and even images...",
-    url: "https://producthunt.com/posts/customodoro",
+    url: "https://www.producthunt.com/products/customodoro-timer/reviews?review=243090",
     author: "Kanza Mushtaq",
   },
 ]
